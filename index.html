@@ -3,89 +3,54 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#03050a">
+<meta name="theme-color" content="#090b12">
 <meta name="color-scheme" content="dark">
 <meta name="description" content="Foldrone. Digital products. One universe.">
-<link rel="icon" href="/assets/foldrone-wordmark.webp">
-<link rel="manifest" href="/manifest.webmanifest">
-<link rel="stylesheet" href="/styles.css">
 <title>Foldrone | The Foldrone Universe</title>
+<style>
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#05070c}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif;overflow-x:hidden}
+.stage{width:min(100vw,1024px);margin:0 auto;position:relative;line-height:0;background:#05070c;box-shadow:0 0 120px rgba(0,0,0,.5)}
+.stage img{display:block;width:100%;height:auto;margin:0;user-select:none;-webkit-user-drag:none;-webkit-touch-callout:none}
+.hotspot{position:absolute;display:block;z-index:4;border-radius:22px;outline:none}
+.hotspot:focus-visible{box-shadow:0 0 0 3px rgba(72,218,255,.9),0 0 28px rgba(72,218,255,.35)}
+.explore{left:7.9%;top:31.55%;width:20.0%;height:4.7%}
+.play{left:5.7%;top:39.05%;width:43.5%;height:23.1%}
+.studio{left:51.1%;top:39.05%;width:43.5%;height:23.1%}
+.products{left:51.5%;top:95.1%;width:8%;height:2.8%}
+.about{left:60.4%;top:95.1%;width:7%;height:2.8%}
+.security{left:69.4%;top:95.1%;width:8%;height:2.8%}
+.privacy{left:77.1%;top:95.1%;width:7%;height:2.8%}
+.terms{left:84.0%;top:95.1%;width:6%;height:2.8%}
+.contact{left:89.9%;top:95.1%;width:8%;height:2.8%}
+.labs{left:4.5%;top:92.0%;width:15%;height:4.0%}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1024px){.stage{width:100vw}}
+@media(orientation:landscape) and (min-width:1025px){
+ .stage{width:min(66.6667vw,1024px)}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-<div class="cosmos" aria-hidden="true">
-  <div class="stars stars-a"></div><div class="stars stars-b"></div>
-  <div class="aurora aurora-a"></div><div class="aurora aurora-b"></div><div class="aurora aurora-c"></div>
-  <div class="light-sweep"></div>
-</div>
-
-<header class="site-header">
-  <a class="brand" href="/" aria-label="Foldrone home"><img src="/assets/foldrone-wordmark.webp" alt="Foldrone" draggable="false"></a>
-  <button class="menu" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  <nav>
-    <a href="#products">Products</a>
-    <a href="/about.html">About</a>
-    <a href="/contact.html">Contact</a>
-  </nav>
-</header>
-
-<main>
-<section class="hero">
-  <div class="hero-art" aria-hidden="true">
-    <img src="/assets/foldrone-universe-dark.webp" alt="" fetchpriority="high" draggable="false">
-  </div>
-  <div class="hero-vignette" aria-hidden="true"></div>
-  <div class="hero-copy">
-    <h1>Digital products.<br><span>One universe.</span></h1>
-    <p class="micro">IDEAS · TOOLS · EXPERIENCES</p>
-    <a class="cta" href="#products">Explore <b>→</b></a>
-  </div>
-</section>
-
-<section id="products" class="products">
-  <div class="products-track">
-    <a class="card card-play" href="https://play.foldrone.com">
-      <div class="label"><span>MEDIA</span><span>↗</span></div>
-      <img class="product-logo" src="/assets/foldrone-play-wordmark.webp" alt="Foldrone Play" draggable="false">
-      <p>A media player for the modern media experience.</p>
-    </a>
-    <a class="card card-studio" href="https://studio.foldrone.com">
-      <div class="label"><span>CREATION</span><span>↗</span></div>
-      <img class="product-logo" src="/assets/foldrone-studio-wordmark.webp" alt="Foldrone Studio" draggable="false">
-      <p>A creative environment within the Foldrone ecosystem.</p>
-    </a>
-    <a class="card card-workspace" href="https://workspace.foldrone.com">
-      <div class="label"><span>PRODUCTIVITY</span><span>↗</span></div>
-      <div class="text-mark">W</div>
-      <h2>Workspace</h2>
-      <p>Documents, PDF tools and intelligent utilities.</p>
-    </a>
-    <a class="card card-labs" href="https://labs.foldrone.com">
-      <div class="label"><span>EXPLORATION</span><span>↗</span></div>
-      <div class="text-mark lab-mark">L</div>
-      <h2>Labs</h2>
-      <p>New ideas and future Foldrone experiences.</p>
-    </a>
-  </div>
-</section>
-
-<section class="cosmic-end" aria-hidden="true">
-  <div class="galaxy"></div>
-  <div class="planet"></div>
-  <div class="end-stars"></div>
-</section>
+<main class="stage" aria-label="Foldrone homepage">
+<img src="/assets/reference-homepage.webp" alt="Foldrone. Digital products. One universe.">
+<a class="hotspot explore" href="#products"><span class="sr-only">Explore Foldrone products</span></a>
+<a class="hotspot play" href="https://play.foldrone.com" aria-label="Open Foldrone Play"></a>
+<a class="hotspot studio" href="https://studio.foldrone.com" aria-label="Open Foldrone Studio"></a>
+<a class="hotspot products" href="#products" aria-label="Products"></a>
+<a class="hotspot about" href="/about.html" aria-label="About Foldrone"></a>
+<a class="hotspot security" href="/security.html" aria-label="Security"></a>
+<a class="hotspot privacy" href="/privacy.html" aria-label="Privacy"></a>
+<a class="hotspot terms" href="/terms.html" aria-label="Terms"></a>
+<a class="hotspot contact" href="/contact.html" aria-label="Contact"></a>
+<a class="hotspot labs" href="https://www.facebook.com/foldronelabs/" aria-label="Foldrone Labs"></a>
 </main>
-
-<footer class="site-footer">
-  <img src="/assets/foldrone-wordmark.webp" alt="Foldrone" class="footer-logo" draggable="false">
-  <div class="footer-row">
-    <span>© 2026 Foldrone Labs. All rights reserved.</span>
-    <nav>
-      <a href="#products">Products</a><a href="/about.html">About</a><a href="/security.html">Security</a>
-      <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/contact.html">Contact</a>
-    </nav>
-  </div>
-  <a class="labs" href="https://www.facebook.com/foldronelabs/" rel="noopener noreferrer">Foldrone Labs</a>
-</footer>
-<script src="/script.js" defer></script>
+<section id="products" class="sr-only">
+<h1>Foldrone products</h1>
+<p>Foldrone Play is a media player. Foldrone Studio is a creative environment.</p>
+</section>
 </body>
 </html>
