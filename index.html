@@ -13,22 +13,27 @@
 </head>
 <body>
 <div class="cosmos" aria-hidden="true">
-  <div class="stars s1"></div><div class="stars s2"></div>
-  <div class="aurora a1"></div><div class="aurora a2"></div><div class="aurora a3"></div>
-  <div class="sweep"></div>
+  <div class="stars stars-a"></div><div class="stars stars-b"></div>
+  <div class="aurora aurora-a"></div><div class="aurora aurora-b"></div><div class="aurora aurora-c"></div>
+  <div class="light-sweep"></div>
 </div>
 
-<header>
-  <a class="brand" href="/" aria-label="Foldrone"><img src="/assets/foldrone-wordmark.webp" alt="Foldrone"></a>
-  <button class="hamburger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
-  <nav><a href="#products">Products</a><a href="/about.html">About</a><a href="/contact.html">Contact</a></nav>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Foldrone home"><img src="/assets/foldrone-wordmark.webp" alt="Foldrone" draggable="false"></a>
+  <button class="menu" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav>
+    <a href="#products">Products</a>
+    <a href="/about.html">About</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
 </header>
 
 <main>
 <section class="hero">
   <div class="hero-art" aria-hidden="true">
-    <img src="/assets/foldrone-universe-dark.webp" alt="">
+    <img src="/assets/foldrone-universe-dark.webp" alt="" fetchpriority="high" draggable="false">
   </div>
+  <div class="hero-vignette" aria-hidden="true"></div>
   <div class="hero-copy">
     <h1>Digital products.<br><span>One universe.</span></h1>
     <p class="micro">IDEAS · TOOLS · EXPERIENCES</p>
@@ -37,17 +42,29 @@
 </section>
 
 <section id="products" class="products">
-  <div class="cards">
-    <article class="card card-play">
-      <div class="label"><span>MEDIA</span><span>›</span></div>
-      <img class="product-logo" src="/assets/foldrone-play-wordmark.webp" alt="Foldrone Play">
-      <p>A media player for the modern<br class="wide"> media experience.</p>
-    </article>
-    <article class="card card-studio">
-      <div class="label"><span>CREATION</span><span>›</span></div>
-      <img class="product-logo" src="/assets/foldrone-studio-wordmark.webp" alt="Foldrone Studio">
-      <p>A creative environment within<br class="wide"> the Foldrone ecosystem.</p>
-    </article>
+  <div class="products-track">
+    <a class="card card-play" href="https://play.foldrone.com">
+      <div class="label"><span>MEDIA</span><span>↗</span></div>
+      <img class="product-logo" src="/assets/foldrone-play-wordmark.webp" alt="Foldrone Play" draggable="false">
+      <p>A media player for the modern media experience.</p>
+    </a>
+    <a class="card card-studio" href="https://studio.foldrone.com">
+      <div class="label"><span>CREATION</span><span>↗</span></div>
+      <img class="product-logo" src="/assets/foldrone-studio-wordmark.webp" alt="Foldrone Studio" draggable="false">
+      <p>A creative environment within the Foldrone ecosystem.</p>
+    </a>
+    <a class="card card-workspace" href="https://workspace.foldrone.com">
+      <div class="label"><span>PRODUCTIVITY</span><span>↗</span></div>
+      <div class="text-mark">W</div>
+      <h2>Workspace</h2>
+      <p>Documents, PDF tools and intelligent utilities.</p>
+    </a>
+    <a class="card card-labs" href="https://labs.foldrone.com">
+      <div class="label"><span>EXPLORATION</span><span>↗</span></div>
+      <div class="text-mark lab-mark">L</div>
+      <h2>Labs</h2>
+      <p>New ideas and future Foldrone experiences.</p>
+    </a>
   </div>
 </section>
 
@@ -58,14 +75,17 @@
 </section>
 </main>
 
-<footer>
-  <img src="/assets/foldrone-wordmark.webp" alt="Foldrone" class="footer-logo">
+<footer class="site-footer">
+  <img src="/assets/foldrone-wordmark.webp" alt="Foldrone" class="footer-logo" draggable="false">
   <div class="footer-row">
     <span>© 2026 Foldrone Labs. All rights reserved.</span>
-    <nav><a href="#products">Products</a><a href="/about.html">About</a><a href="/security.html">Security</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/contact.html">Contact</a></nav>
+    <nav>
+      <a href="#products">Products</a><a href="/about.html">About</a><a href="/security.html">Security</a>
+      <a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/contact.html">Contact</a>
+    </nav>
   </div>
   <a class="labs" href="https://www.facebook.com/foldronelabs/" rel="noopener noreferrer">Foldrone Labs</a>
 </footer>
-
 <script src="/script.js" defer></script>
-</body></html>
+</body>
+</html>

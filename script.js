@@ -1,1 +1,7 @@
-(()=>{document.querySelectorAll('img').forEach(i=>{['contextmenu','dragstart','selectstart'].forEach(e=>i.addEventListener(e,x=>x.preventDefault()))});const b=document.querySelector('.hamburger'),n=document.querySelector('header nav');if(b&&n)b.onclick=()=>{let o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',!o);n.classList.toggle('open',!o)};})();
+(()=>{'use strict';
+document.querySelectorAll('img').forEach(img=>{
+  ['contextmenu','dragstart','selectstart'].forEach(evt=>img.addEventListener(evt,e=>e.preventDefault()));
+});
+const menu=document.querySelector('.menu'),nav=document.querySelector('.site-header nav');
+if(menu&&nav){menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));nav.classList.toggle('open',!open);});}
+})();
