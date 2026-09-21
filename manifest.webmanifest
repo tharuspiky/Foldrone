@@ -1,1 +1,1 @@
-{"name":"Foldrone","short_name":"Foldrone","start_url":"/","display":"standalone","background_color":"#05070c","theme_color":"#05070c","description":"The Foldrone Universe","icons":[{"src":"/assets/foldrone-wordmark.png","sizes":"2116x743","type":"image/png","purpose":"any"}]}
+{"name":"Foldrone","short_name":"Foldrone","start_url":"/","display":"standalone","background_color":"#05070c","theme_color":"#05070c","description":"The Foldrone Universe","icons":[{"src":"/assets/foldrone-wordmark.webp","sizes":"2116x743","type":"image/webp","purpose":"any"}]}
