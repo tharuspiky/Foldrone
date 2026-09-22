@@ -3,117 +3,106 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#03040a">
+<meta name="theme-color" content="#02040a">
 <meta name="color-scheme" content="dark">
-<meta name="description" content="Foldrone. Digital products. One universe.">
+<meta name="description" content="Foldrone is a universe of digital products and experiences.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" href="/assets/foldrone-wordmark.webp">
 <link rel="manifest" href="/manifest.webmanifest">
 <link rel="stylesheet" href="/styles.css">
 <title>Foldrone | The Foldrone Universe</title>
 </head>
 <body>
+<div class="universe-bg" aria-hidden="true"></div>
+<div class="ambient-glow ambient-a" aria-hidden="true"></div>
+<div class="ambient-glow ambient-b" aria-hidden="true"></div>
+<div class="ambient-stars" aria-hidden="true"></div>
 
-<div class="cosmos" aria-hidden="true">
-  <div class="cosmos-noise"></div>
-  <div class="galaxy galaxy-a"></div>
-  <div class="galaxy galaxy-b"></div>
-  <div class="galaxy galaxy-c"></div>
-  <div class="starfield starfield-a"></div>
-  <div class="starfield starfield-b"></div>
-  <div class="light-arc"></div>
-</div>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="header">
-  <a class="header-logo" href="/" aria-label="Foldrone home">
+  <a class="brand" href="/" aria-label="Foldrone home">
     <img src="/assets/foldrone-wordmark.webp" alt="Foldrone" draggable="false">
   </a>
 
-  <nav class="desktop-nav" aria-label="Primary">
+  <nav class="desktop-nav" aria-label="Primary navigation">
     <a href="#products">Products</a>
     <a href="/about.html">About</a>
-    <a href="/contact.html">Contact</a>
+    <a href="/privacy.html">Privacy</a>
   </nav>
 
-  <button class="menu-button" type="button" aria-label="Open menu" aria-controls="mobile-nav" aria-expanded="false">
-    <i></i><i></i><i></i>
+  <button class="menu-button" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+    <span></span><span></span><span></span>
   </button>
 
-  <div class="mobile-nav" id="mobile-nav">
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
     <a href="#products">Products</a>
     <a href="/about.html">About</a>
     <a href="/security.html">Security</a>
+    <a href="/privacy.html">Privacy</a>
     <a href="/contact.html">Contact</a>
-  </div>
+  </nav>
 </header>
 
-<main>
+<main id="main">
   <section class="hero">
-    <div class="hero-universe" aria-hidden="true">
-      <img src="/assets/foldrone-universe-dark.webp" alt="" fetchpriority="high" draggable="false">
-    </div>
-
     <div class="hero-copy">
+      <p class="kicker">THE FOLDRONE UNIVERSE</p>
       <h1>Digital products.<br><span>One universe.</span></h1>
-      <p class="hero-intro">A growing family of digital experiences, brought together by Foldrone.</p>
-      <a class="hero-cta" href="#products">Explore <b>→</b></a>
+      <p class="lead">A growing ecosystem of focused digital experiences, brought together by Foldrone.</p>
+      <a class="hero-button" href="#products">Explore <span>→</span></a>
     </div>
   </section>
 
   <section class="products" id="products">
-    <div class="products-heading">
-      <span>FOLDRONE</span>
-      <h2>Explore the universe.</h2>
+    <div class="section-head">
+      <h2>Explore Foldrone.</h2>
     </div>
 
     <div class="product-grid">
-      <a class="product-card product-play" href="https://play.foldrone.com">
-        <div class="product-meta"><span>MEDIA</span><span>play.foldrone.com</span></div>
-        <div class="card-icon">↗</div>
+      <a class="product-card play" href="https://play.foldrone.com">
+        <div class="card-meta"><span>MEDIA</span><span>play.foldrone.com</span></div>
         <img src="/assets/foldrone-play-wordmark.webp" alt="Foldrone Play" class="product-logo" draggable="false">
         <p>A media player for the modern media experience.</p>
         <span class="card-action">Enter Play <b>↗</b></span>
       </a>
 
-      <a class="product-card product-studio" href="https://studio.foldrone.com">
-        <div class="product-meta"><span>CREATION</span><span>studio.foldrone.com</span></div>
-        <div class="card-icon">↗</div>
+      <a class="product-card studio" href="https://studio.foldrone.com">
+        <div class="card-meta"><span>CREATION</span><span>studio.foldrone.com</span></div>
         <img src="/assets/foldrone-studio-wordmark.webp" alt="Foldrone Studio" class="product-logo" draggable="false">
         <p>A creative environment within the Foldrone ecosystem.</p>
         <span class="card-action">Enter Studio <b>↗</b></span>
       </a>
 
-      <article class="product-card product-workspace">
-        <div class="product-meta"><span>PRODUCTIVITY</span><span>workspace.foldrone.com</span></div>
-        <div class="card-icon">+</div>
-        <div class="generic-product-mark">W</div>
+      <article class="product-card workspace">
+        <div class="card-meta"><span>PRODUCTIVITY</span><span>workspace.foldrone.com</span></div>
+        <div class="symbol">▦</div>
         <h3>Workspace</h3>
-        <p>Documents, PDF tools, productivity and intelligent utilities.</p>
-        <span class="card-action muted">Coming into the universe</span>
+        <p>Documents, PDF tools, productivity and intelligent utilities in one workspace.</p>
+        <span class="card-action muted">In development</span>
       </article>
 
-      <article class="product-card product-labs">
-        <div class="product-meta"><span>EXPLORATION</span><span>labs.foldrone.com</span></div>
-        <div class="card-icon">↗</div>
-        <div class="generic-product-mark labs-mark">L</div>
+      <article class="product-card labs">
+        <div class="card-meta"><span>EXPLORATION</span><span>labs.foldrone.com</span></div>
+        <div class="symbol diamond">◇</div>
         <h3>Labs</h3>
         <p>New ideas and future Foldrone experiences.</p>
-        <a class="card-action" href="/about.html">Explore Labs <b>↗</b></a>
+        <a class="card-action" href="https://labs.foldrone.com">Explore Labs <b>↗</b></a>
       </article>
     </div>
   </section>
 
-  <section class="universe-bridge" aria-label="The Foldrone Universe">
-    <div class="bridge-galaxy"></div>
-    <div class="bridge-rings"></div>
-    <img src="/assets/foldrone-universe-dark.webp" alt="The Foldrone Universe" loading="lazy" draggable="false">
+  <section class="cosmic-transition" aria-hidden="true">
+    <div class="transition-light"></div>
   </section>
 </main>
 
 <footer class="footer">
-  <div class="footer-logo">
+  <a class="footer-brand" href="/" aria-label="Foldrone home">
     <img src="/assets/foldrone-wordmark.webp" alt="Foldrone" draggable="false">
-  </div>
-  <div class="footer-links">
+  </a>
+
+  <div class="footer-columns">
     <div>
       <strong>Explore</strong>
       <a href="#products">Products</a>
@@ -121,8 +110,8 @@
     </div>
     <div>
       <strong>Legal</strong>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
+      <a href="/privacy.html">Privacy Notice</a>
+      <a href="/terms.html">Terms of Use</a>
     </div>
     <div>
       <strong>Information</strong>
@@ -131,6 +120,7 @@
       <a href="https://www.facebook.com/foldronelabs/" rel="noopener noreferrer">Foldrone Labs</a>
     </div>
   </div>
+
   <div class="footer-bottom">
     <span>© 2026 Foldrone Labs. All rights reserved.</span>
   </div>

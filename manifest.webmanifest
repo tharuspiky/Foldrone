@@ -1,1 +1,10 @@
-{"name":"Foldrone","short_name":"Foldrone","start_url":"/","display":"standalone","background_color":"#02040a","theme_color":"#02040a","icons":[{"src":"/assets/foldrone-wordmark.webp","sizes":"2116x743","type":"image/webp","purpose":"any"}]}
+{
+  "name":"Foldrone",
+  "short_name":"Foldrone",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#02040a",
+  "theme_color":"#02040a",
+  "description":"Foldrone. Digital products. One universe.",
+  "icons":[{"src":"/assets/foldrone-wordmark.webp","sizes":"any","type":"image/webp","purpose":"any maskable"}]
+}
