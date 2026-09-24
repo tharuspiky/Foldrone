@@ -47,3 +47,58 @@
   .story-ecosystem .story-inner>p:last-child{margin-top:58px;font-size:1.04rem;line-height:1.52}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ambient-glow,.ambient-stars,.transition-light{animation:none!important}}
+
+/* V12 refinements: story composition, same-menu product accordion, internal navigation controls. */
+.story-start{min-height:clamp(610px,76vh,880px);padding-top:clamp(130px,15vw,220px);padding-bottom:clamp(120px,14vw,210px)}
+.story-start-kicker{margin-bottom:clamp(44px,5vw,72px)}
+.story-start-aura{position:absolute;left:50%;top:44%;width:min(720px,95vw);height:min(520px,70vw);transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(45,112,255,.12),rgba(65,190,255,.045) 34%,transparent 70%);filter:blur(12px);pointer-events:none;z-index:-1}
+.story-start-message{position:relative;margin:clamp(82px,10vw,145px) auto 0;max-width:1080px;display:flex;align-items:center;justify-content:center;gap:18px}
+.story-start-message p{margin:0;color:#aab5c9;font-size:clamp(1.05rem,2.3vw,1.72rem);line-height:1.48;letter-spacing:-.015em}
+.message-orbit{width:18px;height:18px;position:relative;flex:0 0 18px;border:1px solid rgba(75,211,255,.55);border-radius:50%;box-shadow:0 0 24px rgba(55,195,255,.25)}
+.message-orbit:before{content:"";position:absolute;inset:-7px;border:1px solid rgba(124,112,255,.2);border-radius:50%;transform:rotate(30deg) scaleX(1.7)}
+.message-orbit i{position:absolute;width:5px;height:5px;left:6px;top:6px;border-radius:50%;background:#55dfff;box-shadow:0 0 12px #55dfff}
+.story-ecosystem{min-height:clamp(700px,82vh,960px);padding-top:clamp(100px,12vw,180px);padding-bottom:clamp(110px,13vw,190px)}
+.ecosystem-panel{margin-top:clamp(70px,8vw,118px);display:grid;grid-template-columns:minmax(270px,.72fr) minmax(0,1.28fr);gap:clamp(28px,6vw,90px);align-items:center;min-height:330px;padding:clamp(26px,4vw,52px);border:1px solid rgba(111,173,255,.14);border-radius:32px;background:linear-gradient(135deg,rgba(7,13,27,.72),rgba(5,8,18,.38));box-shadow:inset 0 1px rgba(255,255,255,.04),0 35px 90px rgba(0,0,0,.2);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);overflow:hidden;position:relative}
+.ecosystem-panel:after{content:"";position:absolute;inset:auto -10% -55% 30%;height:75%;background:radial-gradient(ellipse,rgba(54,122,255,.16),transparent 68%);filter:blur(20px);pointer-events:none}
+.ecosystem-orbit{position:relative;width:min(330px,70vw);aspect-ratio:1;margin:auto;display:grid;place-items:center}
+.orbit-ring{position:absolute;border:1px solid rgba(86,178,255,.15);border-radius:50%;transform:rotate(-20deg) skewX(-8deg)}
+.ring-one{inset:5%;animation:orbitFloat 12s ease-in-out infinite}
+.ring-two{inset:18%;border-color:rgba(157,103,255,.16);transform:rotate(55deg) skewX(-12deg);animation:orbitFloat 16s ease-in-out infinite reverse}
+.ring-three{inset:31%;border-color:rgba(69,223,255,.14);transform:rotate(-65deg) skewX(-8deg);animation:orbitFloat 20s ease-in-out infinite}
+.orbit-core{width:72px;height:72px;border-radius:24px;display:grid;place-items:center;font-size:32px;font-weight:850;background:linear-gradient(135deg,#f4f7fb,#55dcff 52%,#9e70ff);color:#07101c;box-shadow:0 0 55px rgba(67,207,255,.2)}
+.orbit-node{position:absolute;padding:6px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.11);background:rgba(5,10,20,.82);color:#aeb9cb;font-size:8px;letter-spacing:.18em;font-weight:800;backdrop-filter:blur(8px)}
+.node-play{top:5%;left:50%;transform:translateX(-50%)}.node-studio{right:1%;top:49%;transform:translateY(-50%)}.node-workspace{bottom:4%;left:50%;transform:translateX(-50%)}.node-labs{left:0;top:49%;transform:translateY(-50%)}
+.ecosystem-copy{position:relative;z-index:2;display:grid;grid-template-columns:4px minmax(0,1fr);gap:22px;align-items:start}
+.copy-line{width:4px;min-height:110px;border-radius:999px;background:linear-gradient(180deg,#46dcff,#5d7cff,#b66dff);box-shadow:0 0 24px rgba(74,180,255,.2)}
+.ecosystem-copy p{margin:0;color:#aab5c9;font-size:clamp(1.05rem,2.1vw,1.6rem);line-height:1.55;max-width:720px}
+@keyframes orbitFloat{0%,100%{transform:rotate(-20deg) skewX(-8deg) scale(1)}50%{transform:rotate(-15deg) skewX(-8deg) scale(1.025)}}
+.ring-two{animation-name:orbitFloatTwo}.ring-three{animation-name:orbitFloatThree}@keyframes orbitFloatTwo{0%,100%{transform:rotate(55deg) skewX(-12deg) scale(1)}50%{transform:rotate(61deg) skewX(-12deg) scale(1.03)}}@keyframes orbitFloatThree{0%,100%{transform:rotate(-65deg) skewX(-8deg) scale(1)}50%{transform:rotate(-59deg) skewX(-8deg) scale(1.035)}}
+/* Internal page back control lives in the top-right header, aligned with the menu button. */
+.internal-back{position:fixed;z-index:55;top:15px;right:68px;width:43px;height:43px;border:1px solid rgba(255,255,255,.16);border-radius:10px;background:rgba(4,9,17,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:grid;place-items:center;color:#edf6ff;box-shadow:0 10px 30px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.05);transition:.2s ease}
+.internal-back svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round}.internal-back:hover{background:rgba(15,31,52,.9);border-color:rgba(90,205,255,.34);transform:translateY(-1px)}
+/* Same hamburger panel. Products expand inside it instead of creating another menu. */
+.mobile-products{position:relative}.mobile-menu-label{width:100%;border:0;background:transparent;text-align:left;cursor:pointer}.mobile-menu-label span{display:inline-block;width:12px;transition:transform .22s ease}.mobile-products.expanded .mobile-menu-label span{transform:rotate(90deg)}
+.mobile-product-grid{max-height:0;overflow:hidden;opacity:0;transition:max-height .28s ease,opacity .2s ease,padding .28s ease;margin:0}.mobile-products.expanded .mobile-product-grid{max-height:220px;opacity:1;padding-bottom:10px}
+/* Floating spacecraft appears at the end of every page, then vanishes once the visitor scrolls away from the bottom. */
+.top-control{right:16px;bottom:18px}
+@media (max-width:620px){
+ .story-start{min-height:690px;padding-top:130px;padding-bottom:120px;text-align:center}
+ .story-start-kicker{margin-bottom:46px}
+ .story-start h2{font-size:clamp(3.05rem,14vw,4.9rem);line-height:.91;text-align:center}
+ .story-start-message{margin-top:86px;gap:13px;align-items:flex-start}
+ .story-start-message p{font-size:1.06rem;line-height:1.52;text-align:center}
+ .message-orbit{margin-top:6px;flex-basis:15px;width:15px;height:15px}
+ .message-orbit i{left:5px;top:5px}
+ .desktop-break{display:none}
+ .story-ecosystem{min-height:860px;padding-top:90px;padding-bottom:100px}
+ .story-kicker{margin-bottom:46px}
+ .story-ecosystem h2{font-size:clamp(3rem,13.5vw,4.8rem)}
+ .ecosystem-panel{margin-top:62px;grid-template-columns:1fr;gap:38px;padding:24px 18px 30px;border-radius:26px}
+ .ecosystem-orbit{width:min(285px,78vw)}
+ .ecosystem-copy{gap:15px}
+ .copy-line{min-height:145px}
+ .ecosystem-copy p{font-size:1.04rem;line-height:1.55}
+ .internal-back{top:9px;right:67px;width:43px;height:43px}
+ .top-control{right:13px;bottom:17px}
+}
+@media (prefers-reduced-motion:reduce){.ring-one,.ring-two,.ring-three{animation:none!important}}
