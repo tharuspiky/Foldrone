@@ -102,3 +102,69 @@
  .top-control{right:13px;bottom:17px}
 }
 @media (prefers-reduced-motion:reduce){.ring-one,.ring-two,.ring-three{animation:none!important}}
+
+/* V13: continuous cosmic composition, tighter rhythm, cinematic contact page. */
+.home-page .universe-bg{
+  position:fixed;
+  inset:0;
+  z-index:-30;
+  background:#02040a url("/assets/foldrone-universe-bg.webp") center top/cover no-repeat;
+}
+.home-page .universe-bg:after{
+  background:linear-gradient(180deg,rgba(0,2,8,.04) 0%,rgba(0,2,8,.10) 34%,rgba(0,2,8,.26) 66%,rgba(0,2,8,.82) 100%);
+}
+.home-page .hero{background:none;min-height:min(92svh,900px);padding-top:96px;padding-bottom:62px}
+.home-page .universe-story{background:linear-gradient(180deg,rgba(2,4,10,.22),rgba(2,4,10,.46));}
+.home-page .universe-story:before{background:radial-gradient(circle at 50% 40%,rgba(39,107,255,.09),transparent 42%),linear-gradient(180deg,rgba(2,4,10,.16),rgba(3,6,16,.34) 50%,rgba(2,4,10,.22));}
+.home-page .universe-story:after{opacity:.55}
+.home-page .story-start{min-height:clamp(500px,64vh,700px);padding-top:clamp(90px,9vw,130px);padding-bottom:clamp(70px,9vw,120px)}
+.home-page .story-start-kicker{margin-bottom:clamp(34px,4vw,56px)}
+.home-page .story-start-message{margin-top:clamp(58px,7vw,92px)}
+.home-page .story-ecosystem{min-height:clamp(600px,74vh,800px);padding-top:clamp(78px,9vw,120px);padding-bottom:clamp(78px,9vw,120px)}
+.home-page .ecosystem-panel{margin-top:clamp(42px,5vw,70px);min-height:300px;padding:30px clamp(22px,3vw,42px);background:linear-gradient(135deg,rgba(4,10,24,.76),rgba(4,8,17,.45));}
+.home-page .ecosystem-copy{grid-template-columns:4px minmax(0,1fr);padding-top:34px}
+.ecosystem-copy-label{position:absolute;top:0;left:26px;color:#7e8ba0;font-size:8px;letter-spacing:.24em;font-weight:800}
+.ecosystem-copy-label span{margin-left:12px;color:#43d8ff}
+.home-page .products{padding-top:62px;padding-bottom:62px;background:linear-gradient(180deg,rgba(2,4,10,.18),rgba(2,4,10,.72));}
+.home-page .products:before{background:linear-gradient(180deg,rgba(2,4,10,.20),rgba(2,4,10,.58) 92%,rgba(2,4,10,.82));}
+.home-page .cosmic-transition{display:none}
+.home-page .footer{background:rgba(2,4,10,.66)}
+
+/* Contact: intentional composition instead of a giant centered text row. */
+.contact-page .universe-bg{background-position:center top;background-size:cover}
+.contact-page .legal-page{background:linear-gradient(180deg,rgba(1,3,8,.38),rgba(1,3,8,.78));}
+.contact-main{width:min(1120px,100%);margin:0 auto;min-height:calc(100svh - 76px)!important;padding:clamp(120px,14vw,170px) clamp(22px,6vw,72px) 90px;display:block!important;}
+.contact-shell{min-height:calc(100svh - 250px);display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);align-items:center;gap:clamp(44px,7vw,100px);}
+.contact-intro h1{margin:0;font-size:clamp(3.8rem,7vw,7rem);line-height:.88;letter-spacing:-.07em;font-weight:780;}
+.contact-intro h1 span{background:linear-gradient(100deg,#f5f7fb,#43ddff 44%,#8e72ff 86%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.contact-lead{max-width:560px;margin:32px 0 0;color:#aeb9ca;font-size:clamp(1.05rem,1.8vw,1.3rem);line-height:1.55;}
+.contact-links{display:grid;gap:12px;}
+.contact-card{position:relative;min-height:154px;padding:24px 26px;border:1px solid rgba(255,255,255,.12);border-radius:24px;background:linear-gradient(135deg,rgba(6,14,27,.82),rgba(3,7,15,.54));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:inset 0 1px rgba(255,255,255,.05),0 24px 60px rgba(0,0,0,.24);display:flex;flex-direction:column;justify-content:center;overflow:hidden;transition:transform .25s,border-color .25s;}
+.contact-card:before{content:"";position:absolute;width:180px;height:180px;right:-70px;top:-90px;border-radius:50%;background:radial-gradient(circle,rgba(45,209,255,.20),transparent 68%);}
+.contact-card:nth-child(2):before{background:radial-gradient(circle,rgba(145,90,255,.20),transparent 68%)}
+.contact-card:hover{transform:translateY(-3px);border-color:rgba(77,211,255,.32)}
+.contact-index{position:absolute;top:20px;right:22px;color:#68778d;font-size:9px;letter-spacing:.2em;font-weight:800;}
+.contact-card-label{color:#77869b;font-size:9px;letter-spacing:.24em;font-weight:800;margin-bottom:8px;}
+.contact-card strong{font-size:clamp(1.05rem,2vw,1.35rem);font-weight:700;color:#f4f7fb;word-break:break-word;}
+.contact-card .contact-arrow{position:absolute;right:23px;bottom:20px;color:#45dfff;font-size:18px;}
+.contact-page .legal-footer{background:rgba(2,4,10,.68)}
+
+@media (max-width:620px){
+  .home-page .universe-bg{background-size:cover;background-position:center top;}
+  .home-page .hero{min-height:88svh;padding:78px 18px 42px;}
+  .home-page .story-start{min-height:520px;padding-top:78px;padding-bottom:74px;text-align:center;}
+  .home-page .story-start-message{margin-top:62px;}
+  .home-page .story-ecosystem{min-height:690px;padding-top:70px;padding-bottom:76px;}
+  .home-page .ecosystem-panel{margin-top:40px;min-height:0;padding:26px 16px 24px;gap:24px;}
+  .home-page .ecosystem-orbit{width:min(250px,76vw);}
+  .home-page .ecosystem-copy{padding-top:30px;}
+  .ecosystem-copy-label{left:18px;}
+  .home-page .products{padding-top:48px;padding-bottom:54px;}
+  .contact-main{padding:112px 18px 62px!important;min-height:calc(100svh - 62px)!important;}
+  .contact-shell{min-height:0;display:block;}
+  .contact-intro h1{font-size:clamp(3.3rem,15vw,5.2rem);line-height:.9;}
+  .contact-lead{margin-top:24px;font-size:1rem;}
+  .contact-links{margin-top:42px;gap:11px;}
+  .contact-card{min-height:135px;padding:22px;border-radius:20px;}
+  .internal-back{right:67px;}
+}
